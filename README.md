@@ -31,3 +31,4 @@ Zametki runs entirely in your browser, so setup is instant:
 ## 🙏 Thank You!
 
 Thank you for checking out Zametki! This project was created for studying purposes. If you find it useful, consider giving the repo a ⭐ star, sharing it with classmates, or contributing to the codebase. Bug reports, feature ideas, and feedback are always welcome.
+# i_Zametka
