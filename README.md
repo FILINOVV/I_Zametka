@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="" alt="Zametka Logo">
-    <img src=""/></a>
+    <img width="2000" height="2000" alt="Frame 6" src="https://github.com/user-attachments/assets/c7fb6d81-268e-4b50-982b-bec1f8c4af86" />
 </p>
 
 <h4 align="center">
