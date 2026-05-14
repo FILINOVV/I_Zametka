@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> iZametka </h1>
+        </header>
+
+        <!-- Форма создания заметки -->
+        <div class="note-form">
+            <input 
+                type="text" 
+                id="noteInput" 
+                placeholder="Введите текст заметки..." 
+                class="note-input"
+            >
+            <select id="colorSelect" class="color-select">
+                <option value="#fff">Белый</option>
+                <option value="#ffeb3b">Желтый</option>
+                <option value="#b3e5fc">Голубой</option>
+                <option value="#c8e6c9">Зеленый</option>
+                <option value="#f8bbd0">Розовый</option>
+            </select>
+            <button id="addBtn" class="add-btn">Добавить</button>
+        </div>
+
+        <!-- Фильтры -->
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Поиск..." class="search-input">
+            <select id="sortSelect" class="sort-select">
+                <option value="newest">Сначала новые</option>
+                <option value="oldest">Сначала старые</option>
+                <option value="pinned">Закрепленные</option>
+            </select>
+        </div>
+
+        <!-- Контейнер для заметок -->
+        <div id="notesContainer" class="notes-grid">
+            <!-- Заметки будут добавляться сюда через JS -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
