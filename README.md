@@ -9,7 +9,7 @@
     Легкое веб-приложение, позволяющее пользователям создавать, управлять и хранить заметки непосредственно на своих устройствах с использованием локально хранилища. Полностью функционирует в автономном режиме без передачи данных на внешние серверы.
 </h4>
 
-## Table of Contents
+## Содержание
 
   * [<g-emoji class="g-emoji" alias="thinking" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png">🤔</g-emoji> Почему Zametki?](#-why-zametki)
   * [<g-emoji class="g-emoji" alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png">👀</g-emoji> Как пользоваться?](#-how-can-i-use-it)
