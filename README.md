@@ -5,6 +5,11 @@
     <img width="100" height="100" alt="Z_Logo" src="https://github.com/user-attachments/assets/c888f4cd-758c-475d-9ae6-7aafa9a4758b" />
 </p>
 
+<div align="center">
+    <a href="https://github.com/FILINOVV/I_Zametka">Home Page</a> |
+    <a href="https://izametka.github.io/Zametka/">Site</a>
+</div>
+<br></br>
 <h4 align="center">
     Легкое веб-приложение, позволяющее пользователям создавать, управлять и хранить заметки непосредственно на своих устройствах с использованием локально хранилища. Полностью функционирует в автономном режиме без передачи данных на внешние серверы.
 </h4>
