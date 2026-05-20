@@ -1,4 +1,4 @@
-<img width="333" height="369" alt="image" src="https://github.com/user-attachments/assets/daabfa13-2e3d-45fb-b8d9-4ca27e1c3836" /><h1 align="center"> Zametka </h1>
+<h1 align="center"> Zametka </h1>
 
 <p align="center">
     <a href="https://izametka.github.io/Zametka/" alt="Zametka Logo">
