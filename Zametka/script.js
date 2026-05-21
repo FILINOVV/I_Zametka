@@ -191,7 +191,7 @@ function saveNote() {
                 ...notes[index],
                 title,
                 content,
-                tags
+                tags,
                 mode: currentMode,
                 color: color,
                 pinColor: pinColor,
