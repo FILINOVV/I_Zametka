@@ -19,6 +19,7 @@ function renderNotes() {
     const sortedNotes = [...notes].sort((a, b) => {
         if (a.pinned && !b.pinned) return -1;
         if (!a.pinned && b.pinned) return 1;
+        const priorityOrder = { 'high': 3, 'medium': 2, 'low': 1 };
         return new Date(b.date) - new Date(a.date);
     });
     
@@ -37,6 +38,13 @@ function renderNotes() {
         const tagsHtml = note.tags && note.tags.length > 0 
         ? `<div class="note-tags">${note.tags.map(tag => `<span class="tag"># ${escapeHtml(tag)}</span>`).join('')}</div>`
         : '';
+        
+        const priorityClass = `priority-${note.priority || 'medium'}`;
+        const priorityText = {
+            'high': '🔴 Высокий',
+            'medium': '🟡 Средний',
+            'low': '🟢 Низкий'
+        }[note.priority || 'medium'];
 
         html += `
             <div class="note-card ${note.pinned ? 'pinned' : ''}" 
@@ -44,6 +52,7 @@ function renderNotes() {
                         --pin-bg: ${note.pinColor || '#e1f5fe'}; 
                         --pin-border: ${note.pinColor || '#81d4fa'};
                         --text-color: ${note.textColor || '#5a6c7d'};">
+                <div class="priority-indicator ${priorityClass}">${priorityText}</div>
                 ${note.pinned ? '<div class="pin-indicator">📌</div>' : ''}
                 <div class="note-actions">
                     <button class="btn-icon ${note.pinned ? 'btn-pin active' : 'btn-pin'}" 
@@ -132,6 +141,7 @@ function saveNote() {
     const color = document.getElementById('noteColor').value;
     const pinColor = document.getElementById('pinColor').value;
     const textColor = document.getElementById('textColor').value;
+    const priority = document.getElementById('notePriority').value;
 
     const tagsInput = document.getElementById('noteTags').value.trim();
     const tags = tagsInput ? tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag) : [];
@@ -160,6 +170,7 @@ function saveNote() {
                 pinColor: pinColor,
                 textColor: textColor,
                 tags,
+                priority,
                 date: new Date().toISOString()
             };
         }
@@ -173,6 +184,7 @@ function saveNote() {
             pinColor: pinColor,
             textColor: textColor,
             tags,
+            priority,
             pinned: false,
             date: new Date().toISOString()
         };
@@ -193,6 +205,7 @@ function editNote(id) {
     document.getElementById('noteTitle').value = note.title;
     document.getElementById('noteContent').value = note.content;
     document.getElementById('noteTags').value = note.tags ? note.tags.join(', ') : '';
+    document.getElementById('notePriority').value = note.priority || 'medium';
     document.querySelector('.btn-save').textContent = 'Сохранить';
     
     document.getElementById('noteColor').value = note.color || '#ffffff';
