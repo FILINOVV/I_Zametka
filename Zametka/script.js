@@ -34,6 +34,10 @@ function renderNotes() {
             hasPinned = 2;
         }
         
+        const tagsHtml = note.tags && note.tags.length > 0 
+        ? `<div class="note-tags">${note.tags.map(tag => `<span class="tag"># ${escapeHtml(tag)}</span>`).join('')}</div>`
+        : '';
+
         html += `
             <div class="note-card ${note.pinned ? 'pinned' : ''}" 
                  style="--note-bg: ${note.color || '#ffffff'}; 
@@ -52,6 +56,7 @@ function renderNotes() {
                 </div>
                 <div class="note-title">${escapeHtml(note.title)}</div>
                 <div class="note-content">${formatContent(note.content, note.mode)}</div>
+                ${tagsHtml}
                 <div class="note-date">${formatDate(note.date)}</div>
             </div>
         `;
@@ -128,6 +133,9 @@ function saveNote() {
     const pinColor = document.getElementById('pinColor').value;
     const textColor = document.getElementById('textColor').value;
 
+    const tagsInput = document.getElementById('noteTags').value.trim();
+    const tags = tagsInput ? tagsInput.split(',').map(tag => tag.trim()).filter(tag => tag) : [];
+
     if (!title) {
         alert('Введите название заметки');
         document.getElementById('noteTitle').focus();
@@ -151,6 +159,7 @@ function saveNote() {
                 color: color,
                 pinColor: pinColor,
                 textColor: textColor,
+                tags,
                 date: new Date().toISOString()
             };
         }
@@ -163,6 +172,7 @@ function saveNote() {
             color: color,
             pinColor: pinColor,
             textColor: textColor,
+            tags,
             pinned: false,
             date: new Date().toISOString()
         };
@@ -182,6 +192,7 @@ function editNote(id) {
     document.getElementById('modalHeader').textContent = 'Редактирование заметки';
     document.getElementById('noteTitle').value = note.title;
     document.getElementById('noteContent').value = note.content;
+    document.getElementById('noteTags').value = note.tags ? note.tags.join(', ') : '';
     document.querySelector('.btn-save').textContent = 'Сохранить';
     
     document.getElementById('noteColor').value = note.color || '#ffffff';
