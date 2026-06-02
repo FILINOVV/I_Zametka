@@ -4,24 +4,19 @@ let currentMode = 'text';
 
 function renderNotes() {
     const grid = document.getElementById('notesGrid');
+    const sortOption = document.getElementById('sortOption')?.value || 'date-desc';
+    const sortedNotes = sortNotes(notes, sortOption);
     
-    if (notes.length === 0) {
+     if (sortedNotes.length === 0) {
         grid.innerHTML = `
             <div class="empty-state" style="grid-column: 1/-1;">
-                <div class="empty-state-icon"></div>
+                <div class="empty-state-icon">📭</div>
                 <h3>Пока нет заметок</h3>
                 <p>Создайте свою первую заметку!</p>
             </div>
         `;
         return;
     }
-    
-    const sortedNotes = [...notes].sort((a, b) => {
-        if (a.pinned && !b.pinned) return -1;
-        if (!a.pinned && b.pinned) return 1;
-        const priorityOrder = { 'high': 3, 'medium': 2, 'low': 1 };
-        return new Date(b.date) - new Date(a.date);
-    });
     
     let html = '';
     let hasPinned = false;
@@ -74,6 +69,34 @@ function renderNotes() {
     grid.innerHTML = html;
 }
 
+function sortNotes(notesArray, sortOption) {
+    return [...notesArray].sort((a, b) => {
+        if (a.pinned && !b.pinned) return -1;
+        if (!a.pinned && b.pinned) return 1;
+        
+        const priorityOrder = { 'high': 3, 'medium': 2, 'low': 1 };
+        
+        switch(sortOption) {
+            case 'date-desc':
+                return new Date(b.date) - new Date(a.date);
+            case 'date-asc':
+                return new Date(a.date) - new Date(b.date);
+            case 'priority-desc':
+                if (priorityOrder[b.priority] !== priorityOrder[a.priority]) {
+                    return priorityOrder[b.priority] - priorityOrder[a.priority];
+                }
+                return new Date(b.date) - new Date(a.date);
+            case 'priority-asc':
+                if (priorityOrder[a.priority] !== priorityOrder[b.priority]) {
+                    return priorityOrder[a.priority] - priorityOrder[b.priority];
+                }
+                return new Date(b.date) - new Date(a.date);
+            default:
+                return new Date(b.date) - new Date(a.date);
+        }
+    });
+}
+
 function formatContent(content, mode) {
     if (mode === 'list') {
         const items = content.split('\n').filter(item => item.trim());
@@ -105,6 +128,7 @@ function openModal() {
     document.getElementById('modalHeader').textContent = 'Создание заметки';
     document.getElementById('noteTitle').value = '';
     document.getElementById('noteContent').value = '';
+    document.getElementById('noteTags').value = '';
     document.querySelector('.btn-save').textContent = 'Создать';
     setMode('text');
     
@@ -240,3 +264,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 renderNotes();
+
+document.getElementById('sortOption')?.addEventListener('change', () => {
+    renderNotes();
+});
