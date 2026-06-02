@@ -15,6 +15,19 @@
      <div class="notes-grid" id="notesGrid"></div>
     </div>
     
+     <div class="filter-panel">
+        <div class="filter-group">
+            <label class="filter-label">Сортировка:</label>
+            <select id="sortOption" class="filter-select">
+                <option value="date-desc">📅 По дате (новые)</option>
+                <option value="date-asc">📅 По дате (старые)</option>
+                <option value="priority-desc">⭐ По приоритету (высокий)</option>
+                <option value="priority-asc">⭐ По приоритету (низкий)</option>
+            </select>
+        </div>
+    </div>
+    <div class="notes-grid" id="notesGrid"></div>
+</div>
 
     <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
         <div class="modal" onclick="event.stopPropagation()">
