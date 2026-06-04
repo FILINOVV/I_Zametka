@@ -447,4 +447,27 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const popaZ = document.getElementById('popa-Z');
+    const popaAudio = document.getElementById('popa-Audio');
+
+
+    if (popaZ && popaAudio) {
+        popaZ.addEventListener('click', () => {
+          
+            if (popaAudio.paused) {
+                popaAudio.play().catch(error => {
+                    console.log('Ошибка воспроизведения (проверь файл anthem.mp3):', error);
+                });
+            } else {
+               
+                popaAudio.pause();
+                popaAudio.currentTime = 0;
+            }
+        });
+    } else {
+        console.error('Ошибка: Не найден элемент с id="popa-Z" или id="popa-Audio" в HTML');
+    }
+});
+
 renderNotes();
