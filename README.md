@@ -18,6 +18,7 @@
 
   * [<g-emoji class="g-emoji" alias="thinking" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png">🤔</g-emoji> Почему Zametki?](#-why-zametki)
   * [<g-emoji class="g-emoji" alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png">👀</g-emoji> Как пользоваться?](#-how-can-i-use-it)
+  * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png">😸</g-emoji> С запуском справиться даже котёнок!](#-cat)
   * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png">🙏</g-emoji> Благодарности!](#-thank-you)
 
 ## 🤔 Почему Zametki?
@@ -32,7 +33,7 @@
 6. 📌 **Прикрепите заметку** - любую заметку всегда можно закрепить, чтобы не потерять в дальнейшем
 7. ✏️ **Выберите цвет** - важность заметки можно выбрать цветом
 
-## 🐱 С запуском справиться даже котёнок!
+## 😸 С запуском справиться даже котёнок!
 
 Zametki работает полностью в вашем браузере, а интерфейс прост и понятен в обращении, поэтому пользоваться сможет кто угодно. Просто откройте сайт и начните работать. Ничего лишнего!
 
