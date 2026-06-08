@@ -16,10 +16,10 @@
 
 ## Содержание
 
-  * [<g-emoji class="g-emoji" alias="thinking" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png">🤔</g-emoji> Почему Zametki?](#-Почему-Zametki?)
-  * [<g-emoji class="g-emoji" alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png">👀</g-emoji> Как пользоваться?](#-Как-пользоваться?)
-  * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png">😸</g-emoji> С запуском справиться даже котёнок!](#-С-запуском-справиться-даже-котёнок!)
-  * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png">🙏</g-emoji> Благодарности!](#-Благодарности!)
+  * [<g-emoji class="g-emoji" alias="thinking" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f914.png">🤔</g-emoji> Почему Zametki?](#-Почему-Zametki)
+  * [<g-emoji class="g-emoji" alias="eyes" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f440.png">👀</g-emoji> Как пользоваться?](#-Как-пользоваться)
+  * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f638.png">😸</g-emoji> С запуском справиться даже котёнок!](#-С-запуском-справиться-даже-котёнок)
+  * [<g-emoji class="g-emoji" alias="pray" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f64f.png">🙏</g-emoji> Благодарности!](#-Благодарности)
 
 ## 🤔 Почему Zametki?
 
